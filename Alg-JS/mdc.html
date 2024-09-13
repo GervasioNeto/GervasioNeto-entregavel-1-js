@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de MDC</title>
+</head>
+<body>
+    <h1>Calculador de Máximo Divisor Comum (MDC)</h1>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMDC(a, b) {
+            while (b !== 0) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
+        }
+
+        let numero1 = parseInt(prompt("Digite o primeiro número:"));
+        let numero2 = parseInt(prompt("Digite o segundo número:"));
+
+        let resultado = document.getElementById("resultado");
+        let mdc = calcularMDC(numero1, numero2);
+        resultado.textContent = "O MDC de " + numero1 + " e " + numero2 + " é: " + mdc;
+    </script>
+</body>
+</html>

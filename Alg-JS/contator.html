@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contagem</title>
+</head>
+<body>
+    <h1>Contagem de números inteiros</h1>
+    <script>
+        function contarNumerosInteiros(){
+          const n = parseInt(prompt("Digite um número inteiro:"));
+
+          let numeros = [];
+
+          for(let i = 0; i < n; i++){
+            let numero = parseFloat(prompt(`Digite o ${i+1}º número:`));
+            numeros.push(numero);
+          }
+          let count = 0;
+          for(let i = 0; i < numeros.length; i++){
+            if(Number.isInteger(numeros[i])){
+              count++;
+            }
+          }
+          alert(`Foram digitados ${count} números inteiros.`);
+        }
+        contarNumerosInteiros();
+    </script>
+</body>
+</html>

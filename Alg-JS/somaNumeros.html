@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Soma de Números</title>
+</head>
+<body>
+    <h1>Soma de Números</h1>
+    <script>
+        var n = prompt("Informe a quantidade de números:");
+        var numero;
+        var soma = 0;
+        var i = 0;
+
+        while (i < n) {
+            numero = parseInt(prompt("Informe um número:"));
+            soma += numero;
+            i++;
+        }
+
+        document.write("A soma dos " + n + " números é " + soma);
+    </script>
+</body>
+</html>
